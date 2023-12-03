@@ -1,0 +1,46 @@
+//variables file
+@import "variables.scss";
+@import "fonts.scss";
+
+
+:root{
+
+    --primaryColor: #{$primaryColor};
+    --secondaryColor: #{$secondaryColor};
+    --white: #{$white};
+    --black: #{$black};
+    --fontLight: #{$fontLight};
+    --fontExtraLight: #{$fontExtraLight};
+    --fontBlack: #{$fontBlack};
+    --fontBold: #{$fontBold};
+    --fontExtraBold: #{$fontExtraBold};
+    --fontMedium: #{$fontMedium};
+    --fontRegular: #{$fontRegular};
+    --transition: #{$transition};
+    --primaryColorFilter: #{$primaryColorFilter};
+    --whiteColorFilter: #{$whiteColorFilter};
+
+    --breakpoint-sm: #{$breakpoint-sm};
+    --breakpoint-md: #{$breakpoint-md};
+    --breakpoint-lg: #{$breakpoint-lg};
+    --breakpoint-xl: #{$breakpoint-xl};
+    --breakpoint-xxl: #{$breakpoint-xxl};
+
+}
+
+
+
+//global file
+@import "global.scss";
+
+//navbar file
+@import "navbar.scss";
+
+//slider file
+@import "main.scss";
+
+//footer file
+@import "footer.scss";
+
+//responsive file
+@import "responsive.scss";

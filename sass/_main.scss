@@ -1,0 +1,86 @@
+.banner__video {
+    .video {
+        @include absolute-position(0, 0, 100%, 100%);
+        z-index: 1;
+    }
+
+    .layer {
+        @include absolute-position(0, 0, 100%, 100%);
+        @include transparency($black, 0.7);
+        z-index: 2;
+    }
+
+    .banner_content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .down_icon {
+        @include absolute-position(85%, 50%, 0, 0)
+    }
+}
+
+.mission {
+    .mission_pattern{
+        img{
+            position: absolute;
+            top: -500px;
+            right: -550px;
+            z-index: 3;
+        }
+    }
+    .mission_icon {
+        position: relative;
+        padding: 25px;
+        &:hover{
+            &::before{
+                transform: rotate(360deg);
+            }
+        }
+        &::before {
+            @include absolute-position(0, 0, 100%, 100%);
+            @extend %transition;
+            background: url(../img/cut-circle.png) no-repeat center center;
+            background-size: 100% 100%;
+        }
+    }
+    .shape_icon{
+        img{
+            position: relative;
+            top: -47px;
+            left: -65%;
+        }
+    }
+}
+
+.about{
+    background-image: url('../img/map-pattern.svg');
+    background-size: 500px;
+    background-position: top 0 left 100px;
+    background-repeat: repeat-x;
+    div[class*='box_']{
+        position: relative;
+        &.box_1{
+            left: -150px;
+        }
+        &.box_2{
+            left: -80px;
+        }
+        &.box_3{
+            left: -200px;
+        }
+        &.box_5{
+            right: -100px;
+        }
+    }
+}
+
+.cards{
+    .feature_box{
+        background-image: var(--background);
+        background-size: cover;
+        &>div{
+            @include transparency($secondaryColor, .77);
+        }
+    }
+}

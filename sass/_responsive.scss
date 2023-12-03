@@ -1,0 +1,47 @@
+@media (max-width: $breakpoint-sm) {
+    @for $i from 1 through 40 {
+        .font_size__#{$i * 5} {
+            font-size: #{$i * 3}px;
+        }
+    }
+} 
+
+@media (min-width: $breakpoint-sm) {
+    @for $i from 1 through 40 {
+        .font_size__#{$i * 5} {
+            font-size: #{$i * 3.4}px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    @for $i from 1 through 40 {
+        .font_size__#{$i * 5} {
+            font-size: #{$i * 3.8}px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    @for $i from 1 through 40 {
+        .font_size__#{$i * 5} {
+            font-size: #{$i * 4.2}px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    @for $i from 1 through 40 {
+        .font_size__#{$i * 5} {
+            font-size: #{$i * 4.6}px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-xxl) {
+    @for $i from 1 through 40 {
+        .font_size__#{$i * 5} {
+            font-size: #{$i * 5}px;
+        }
+    }
+}

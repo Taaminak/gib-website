@@ -1,0 +1,157 @@
+/*-------------------------------------- start global -----------------------*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--fontRegular);
+    @extend .font_size__20;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: var(--fontRegular) !important;
+}
+
+.white_color {
+    color: var(--white);
+}
+
+.black_color {
+    color: var(--black);
+}
+
+.primary_color {
+    color: var(--primaryColor);
+}
+
+.secondary_color {
+    color: var(--secondaryColor);
+}
+
+.primary_bg {
+    background-color: var(--primaryColor);
+}
+
+.secondary_bg {
+    background-color: var(--secondaryColor);
+}
+
+.primary_color__filter{
+    filter : var(--primaryColorFilter);
+}
+.white_color__filter{
+    filter : var(--whiteColorFilter);
+}
+
+.font_black {
+    font-family: var(--fontBlack);
+}
+
+.font_bold {
+    font-family: var(--fontBold);
+}
+.font_medium {
+    font-family: var(--fontMedium);
+}
+.font_light {
+    font-family: var(--fontLight);
+}
+
+.font_extra__bold {
+    font-family: var(--fontExtraBold);
+}
+
+.transition{
+    @extend %transition;
+}
+
+
+
+@for $i from 1 through 10 {
+    .border_radius__#{$i * 5} {
+        border-radius: #{$i * 5}px;
+    }
+}
+
+
+.letter_spacing__2{
+    letter-spacing: 2px;
+}
+
+.arrow_icon{
+    border: 1px solid var(--white);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    &:hover{
+        &:before{
+            transform: rotate(180deg);
+        }
+    }
+    img{
+        height: 20px;
+    }
+    &::before{
+        @include absolute-position(0,0, 100%, 100%);
+        border: 3px solid transparent;
+        border-right-color: var(--white);
+        border-radius: 50%;
+        @extend %transition;
+    }
+}
+
+.line_under {
+    &:before {
+        @include absolute-position(80%, 7%, 50%, 1px);
+        @extend .primary_bg;
+    }
+}
+
+
+.custom-control-label::before {
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid lighten($color: $black, $amount: 50);
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+.btn {
+    .btn-primary {
+        background-color: var(--primaryColor);
+    }
+}
+
+.form-control{
+    padding: 10px;
+    @extend .border_radius__10;
+    border-color: var(--primaryColor);
+}
+
+
+/*------------------------- end global -----------------------*/
