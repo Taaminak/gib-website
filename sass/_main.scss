@@ -21,22 +21,25 @@
 }
 
 .mission {
-    .mission_pattern{
-        img{
+    .mission_pattern {
+        img {
             position: absolute;
             top: -500px;
             right: -550px;
             z-index: 3;
         }
     }
+
     .mission_icon {
         position: relative;
         padding: 25px;
-        &:hover{
-            &::before{
+
+        &:hover {
+            &::before {
                 transform: rotate(360deg);
             }
         }
+
         &::before {
             @include absolute-position(0, 0, 100%, 100%);
             @extend %transition;
@@ -44,8 +47,9 @@
             background-size: 100% 100%;
         }
     }
-    .shape_icon{
-        img{
+
+    .shape_icon {
+        img {
             position: relative;
             top: -47px;
             left: -65%;
@@ -53,34 +57,128 @@
     }
 }
 
-.about{
+.about {
     background-image: url('../img/map-pattern.svg');
     background-size: 500px;
     background-position: top 0 left 100px;
     background-repeat: repeat-x;
-    div[class*='box_']{
+
+    div[class*='box_'] {
         position: relative;
-        &.box_1{
+
+        &.box_1 {
             left: -150px;
         }
-        &.box_2{
+
+        &.box_2 {
             left: -80px;
         }
-        &.box_3{
+
+        &.box_3 {
             left: -200px;
         }
-        &.box_5{
+
+        &.box_5 {
             right: -100px;
         }
     }
 }
 
-.cards{
-    .feature_box{
+.cards {
+    .feature_box {
         background-image: var(--background);
         background-size: cover;
-        &>div{
+
+        &>div {
             @include transparency($secondaryColor, .77);
+        }
+    }
+}
+
+.services {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+    .col-md-4 {
+        .single_col {
+            max-height: 500px;
+            ul{
+                opacity: 0;
+                @extend %transition;
+            }
+            &:hover{
+                ul{
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:nth-of-type(1) {
+            padding-top: 100px;
+            .single_col {
+                img {
+                    right: -150px;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            padding-top: 150px;
+            .single_col {
+                img {
+                    left: -258px;
+                }
+            }
+        }
+
+        &:nth-of-type(3) {
+            padding-top: 50px;
+            .single_col {
+                img {
+                    left: -175px;
+                }
+            }
+        }
+    }
+
+    .service_circle {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border: 1px solid lighten($color: $black, $amount: 50);
+        cursor: pointer;
+        &::before {
+            @include absolute-position(-2px, -2px, calc(100% + 4px), calc(100% + 4px));
+            border-width: 4px;
+            border-style: solid;
+            border-color: var(--primaryColor);
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-radius: 50%;
+            @extend %transition;
+        }
+        &:hover:before{
+            transform: rotate(360deg);
+        }
+    }
+
+    img {
+        max-width: 450px;
+        position: absolute;
+    }
+}
+
+.initiatives{
+    .item_picture{
+        height: 250px;
+        @extend .border_radius__20;
+        overflow: hidden;
+    }
+    .item_content{
+        img{
+            width: 20px !important;
         }
     }
 }
