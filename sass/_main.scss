@@ -16,7 +16,7 @@
     }
 
     .down_icon {
-        @include absolute-position(85%, 50%, 0, 0)
+        @include absolute-position(85%, calc(50% - 25px), 0, 0)
     }
 }
 
@@ -24,8 +24,8 @@
     .mission_pattern {
         img {
             position: absolute;
-            top: -500px;
-            right: -550px;
+            top: -270px;
+            right: 0px;
             z-index: 3;
         }
     }
@@ -49,6 +49,7 @@
     }
 
     .shape_icon {
+        max-height: 200px;
         img {
             position: relative;
             top: -47px;
@@ -63,23 +64,10 @@
     background-position: top 0 left 100px;
     background-repeat: repeat-x;
 
-    div[class*='box_'] {
-        position: relative;
-
-        &.box_1 {
-            left: -150px;
-        }
-
-        &.box_2 {
-            left: -80px;
-        }
-
-        &.box_3 {
-            left: -200px;
-        }
-
-        &.box_5 {
-            right: -100px;
+    .arrow_icon{
+        border-width: 0;
+        &::before{
+            border-right-color: var(--primaryColor);
         }
     }
 }
@@ -100,48 +88,6 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-
-    .col-md-4 {
-        .single_col {
-            max-height: 500px;
-            ul{
-                opacity: 0;
-                @extend %transition;
-            }
-            &:hover{
-                ul{
-                    opacity: 1;
-                }
-            }
-        }
-
-        &:nth-of-type(1) {
-            padding-top: 100px;
-            .single_col {
-                img {
-                    right: -150px;
-                }
-            }
-        }
-
-        &:nth-of-type(2) {
-            padding-top: 150px;
-            .single_col {
-                img {
-                    left: -258px;
-                }
-            }
-        }
-
-        &:nth-of-type(3) {
-            padding-top: 50px;
-            .single_col {
-                img {
-                    left: -175px;
-                }
-            }
-        }
-    }
 
     .service_circle {
         position: relative;
@@ -179,6 +125,17 @@
     .item_content{
         img{
             width: 20px !important;
+        }
+    }
+}
+
+.testimonials{
+    .testimonial_item{
+        .item_picture{
+            width: 60px;
+            height: 60px;
+            top: 30px;
+            position: relative;
         }
     }
 }

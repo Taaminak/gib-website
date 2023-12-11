@@ -1,3 +1,27 @@
 nav{
     top: 30px !important;
 }
+.nav_links{
+    position: fixed;
+    height: 100vh;
+    @include transparency($primaryColor, 77);
+    transform: translateX(110%);
+    width: 300px;
+    max-width: 90%;
+    z-index: 99999;
+    @extend %transition;
+    li{
+        border-bottom: 1px solid lighten($color: $primaryColor, $amount: 10);
+        padding-block: 8px;
+        @extend %transition;
+        &:hover{
+            border-color: var(--secondaryColor);
+        }
+        a{
+            @extend .secondary_color;
+        }
+    }
+    &.nav_open{
+        transform: translateX(0%);
+    }
+}

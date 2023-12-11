@@ -24,6 +24,23 @@ $(document).ready(function () {
 
     $(".owl-carousel-1").owlCarousel({
         loop:true,
+        margin:60,
+        nav:true,
+        rtl: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+    $(".owl-carousel-2").owlCarousel({
+        loop:true,
         margin:40,
         nav:true,
         rtl: true,
@@ -39,7 +56,25 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('#up_icon').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000)
+    })
+
+    $('#down_icon').on('click', function(){
+        $('html, body').animate({
+            scrollTop: $(document).height()
+        }, 1000)
+    })
     
+    $('.open_navbar').on('click', function(){
+        $('.nav_links').addClass('nav_open');
+    })
+    $('.close_navbar').on('click', function(){
+        $('.nav_links').removeClass('nav_open');
+    })
 
 
 });

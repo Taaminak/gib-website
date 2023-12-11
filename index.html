@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
-    
+
     <link rel="stylesheet" href="css/style.css">
 
     <title> GIB Website </title>
@@ -18,30 +18,40 @@
 
 <body>
 
+    <div class="nav_links d-flex flex-column p-5">
+        <span class="me-auto mb-4 close_navbar"> <img src="./img/icons/close.png" role="button"> </span>
+        <ul class="list-unstyled">
+            <li> <a href="#"> لينك </a> </li>
+            <li> <a href="#"> لينك </a> </li>
+            <li> <a href="#"> لينك </a> </li>
+            <li> <a href="#"> لينك </a> </li>
+        </ul>
+    </div>
 
     <nav class="container py-2 px-3 rounded-pill transition fixed-top text-white">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                    <span class="ms-2" role="button"> English </span>
-                    <span role="button" class="menu_icon">
-                        <img src="./img/icons/menu-white.svg">
-                        عرض القائمة
-                    </span>
-                </div>
-                <img class="logo" src="./img/logo-white.svg" width="150">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+                <span class="ms-2" role="button"> English </span>
+                <span role="button" class="menu_icon open_navbar">
+                    <img src="./img/icons/menu-white.svg">
+                    <span class="d-md-inline-block d-none"> عرض القائمة </span>
+                </span>
             </div>
+            <img class="logo" src="./img/logo-white.svg" width="150">
+        </div>
     </nav>
 
     <article class="banner__video vh-100">
         <div class="video overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="./img/banner.png" class="img-fluid w-100" alt="">
+            <img src="./img/banner.png" class="m-h-100 m-w-100" alt="">
         </div>
         <div class="layer"></div>
         <div class="container h-100 d-flex flex-column justify-content-center">
             <div class="d-flex">
                 <div class="col-md-3"></div>
                 <div class="col-md-4 white_color banner_content">
-                    <p data-aos="fade-left" data-aos-duration="1500" class="font_size__45 line_under position-relative font_medium mb-0">
+                    <p data-aos="fade-left" data-aos-duration="1500"
+                        class="font_size__45 line_under position-relative font_medium mb-0">
                         وجهتك الأولى
                     </p>
                     <p data-aos="fade-right" data-aos-duration="1500" class="font_size__45 font_light">
@@ -50,38 +60,46 @@
                 </div>
             </div>
             <div class="down_icon">
-                <span data-aos="fade-up" class="arrow_icon d-flex justify-content-center align-items-center rounded-circle" role="button">
+                <span data-aos="fade-up" id="down_icon"
+                    class="arrow_icon d-flex justify-content-center align-items-center rounded-circle" role="button">
                     <img src="./img/icons/arrow.svg" alt="">
                 </span>
             </div>
         </div>
     </article>
 
-    <article class="mission py-5 my-5">
+    <article class="mission py-md-5 my-md-5 py-4">
         <div class="row no-gutters">
-            <aside class="col-md-4 mission_pattern position-relative">
-                <img src="./img/identity-pattern.svg" data-aos="fade-up" data-aos-duration="1000">
+            <aside class="col-md-4 mission_pattern position-relative d-md-block d-none">
+                <img src="./img/identity-pattern.svg" class="img-fluid" data-aos="fade-up" data-aos-duration="1000">
             </aside>
-            <aside class="col-md-8 overflow-hidden">
+            <aside class="col-md-8  overflow-hidden">
                 <div class="row">
-                    <aside class="col-md-7 mt-5 pt-5">
+                    <aside class="col-md-7 px-4 mt-5 pt-md-5">
                         <div class="mb-4">
-                            <img src="./img/icons/mission.svg" width="120" alt="" data-aos="zoom-out" data-aos-duration="1000">
+                            <img src="./img/icons/mission.svg" width="120" alt="" data-aos="zoom-out"
+                                data-aos-duration="1000">
                             <h6 class="font_bold font_size__30 pe-3 secondary_color"> مهمتنا </h6>
                             <p class="font_size__15">
-                                فهم طبيعة الأعمال لتقديم أفضل خدمات الوساطة التأمينية والمشورة التي تتناسب مع احتياجات عملائنا لذلك نعتمد على نخبة من أفضل الخبراء للوصول لأفضل الحلول التأمينية ومن مسؤوليتنا الحفاظ على ثقة عملائنا و يعتبر التحول الرقمي والتقنيات الحديثة أحد أهم أسلحتنا للمنافسة القوية في سوق التأمين السعودي</p>
+                                فهم طبيعة الأعمال لتقديم أفضل خدمات الوساطة التأمينية والمشورة التي تتناسب مع احتياجات
+                                عملائنا لذلك نعتمد على نخبة من أفضل الخبراء للوصول لأفضل الحلول التأمينية ومن مسؤوليتنا
+                                الحفاظ على ثقة عملائنا و يعتبر التحول الرقمي والتقنيات الحديثة أحد أهم أسلحتنا للمنافسة
+                                القوية في سوق التأمين السعودي</p>
                         </div>
                         <div>
-                            <img src="./img/icons/vision.svg" width="120" alt="" data-aos="zoom-out" data-aos-duration="1000">
+                            <img src="./img/icons/vision.svg" width="120" alt="" data-aos="zoom-out"
+                                data-aos-duration="1000">
                             <h6 class="font_bold font_size__30 pe-3 secondary_color"> رؤيتنا </h6>
                             <p class="font_size__15">
-                                نسعى أن نكون الاختيار الأول لوساطة التأمين عن طريق توفير خيارات تأمينية متميز لجميع العملاء
+                                نسعى أن نكون الاختيار الأول لوساطة التأمين عن طريق توفير خيارات تأمينية متميز لجميع
+                                العملاء
                             </p>
                         </div>
                     </aside>
-                    <aside class="col-md-5 position-relative overflow-hidden">
+                    <aside class="col-md-5 col-10 me-auto position-relative overflow-hidden">
                         <div class="mission_icon col-10">
-                            <img src="./img/mission.png" class="img-fluid" alt="" data-aos="flip-left" data-aos-duration="1000">
+                            <img src="./img/mission.png" class="img-fluid" alt="" data-aos="flip-left"
+                                data-aos-duration="1000">
                         </div>
                         <div class="shape_icon" data-aos="fade-up-right" data-aos-duration="1000">
                             <img src="./img/shape1.svg" class="img-fluid" alt="">
@@ -92,29 +110,33 @@
         </div>
     </article>
 
-    <article class="about secondary_bg vh-100">
-        <section class="container py-5 h-100">
+    <article class="about secondary_bg py-5">
+        <section class="container py-5">
             <div class="d-flex flex-column align-items-center justify-content-around h-100">
                 <div class="col-md-3 mx-auto text-center">
                     <h6 class="h2 text-white font_size__45 line_under position-relative d-inline-block"> عن الخليج </h6>
                 </div>
-                <div class="row w-100">
-                    <aside class="col-md-3 d-flex flex-column justify-content-between">
-                        <div class="d-flex text-white box_1" data-aos="fade" data-aos-delay="200" data-aos-duration="1500">
+                <div class="row w-100 mt-5">
+                    <aside class="col-md-3 d-flex flex-column justify-content-between order-md-0 order-1">
+                        <div class="d-flex text-white box_1 mt-3" data-aos="fade" data-aos-delay="200"
+                            data-aos-duration="1500">
                             <div class="ms-2">
-                                <span class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
+                                <span
+                                    class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
                                     <img src="./img/icons/about-icon-1.svg" alt="">
                                 </span>
                             </div>
                             <div>
-                                <p class="font_size__25 mb-0"> 150+  ألف موظف </p>
+                                <p class="font_size__25 mb-0"> 150+ ألف موظف </p>
                                 <p class="font_size__15"> عدد الموظفين الذين يتم خدمتهم من خلال التأمين الطبي </p>
                             </div>
                         </div>
-                        <div class="d-flex text-white box_2" data-aos="fade" data-aos-delay="400" data-aos-duration="1500">
+                        <div class="d-flex text-white box_2 mt-3" data-aos="fade" data-aos-delay="400"
+                            data-aos-duration="1500">
                             <div class="ms-2">
-                                <span class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
-                                    <img src="./img/icons/about-icon-1.svg" alt="">
+                                <span
+                                    class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
+                                    <img src="./img/icons/about-icon-2.svg" alt="">
                                 </span>
                             </div>
                             <div>
@@ -122,10 +144,12 @@
                                 <p class="font_size__15"> عدد الموظفين </p>
                             </div>
                         </div>
-                        <div class="d-flex text-white box_3" data-aos="fade" data-aos-delay="500" data-aos-duration="1500">
+                        <div class="d-flex text-white box_3 mt-3" data-aos="fade" data-aos-delay="500"
+                            data-aos-duration="1500">
                             <div class="ms-2">
-                                <span class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
-                                    <img src="./img/icons/about-icon-1.svg" alt="">
+                                <span
+                                    class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
+                                    <img src="./img/icons/about-icon-3.svg" alt="">
                                 </span>
                             </div>
                             <div>
@@ -134,25 +158,29 @@
                             </div>
                         </div>
                     </aside>
-                    <aside class="col-md-6 mx-auto">
+                    <aside class="col-md-6 mx-auto order-md-1 order-0">
                         <img src="./img/map.svg" class="img-fluid w-100" data-aos="zoom-in" alt="">
                     </aside>
-                    <aside class="col-md-3 d-flex flex-column justify-content-around">
-                        <div class="d-flex text-white box_4" data-aos="fade" data-aos-delay="300" data-aos-duration="1500">
+                    <aside class="col-md-3 d-flex flex-column justify-content-around order-2">
+                        <div class="d-flex text-white box_4 mt-3" data-aos="fade" data-aos-delay="300"
+                            data-aos-duration="1500">
                             <div class="ms-2">
-                                <span class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
-                                    <img src="./img/icons/about-icon-1.svg" alt="">
+                                <span
+                                    class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
+                                    <img src="./img/icons/about-icon-4.svg" alt="">
                                 </span>
                             </div>
                             <div>
-                                <p class="font_size__25 mb-0"> 30+  مليار ريال سعودي</p>
+                                <p class="font_size__25 mb-0"> 30+ مليار ريال سعودي</p>
                                 <p class="font_size__15"> إجمالي الأصول التي يتم إدارة التأمين عليها </p>
                             </div>
                         </div>
-                        <div class="d-flex text-white box_5" data-aos="fade" data-aos-delay="600" data-aos-duration="1500">
+                        <div class="d-flex text-white box_5 mt-3" data-aos="fade" data-aos-delay="600"
+                            data-aos-duration="1500">
                             <div class="ms-2">
-                                <span class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
-                                    <img src="./img/icons/about-icon-1.svg" alt="">
+                                <span
+                                    class="arrow_icon d-flex justify-content-center align-items-center rounded-circle bg-white">
+                                    <img src="./img/icons/about-icon-5.svg" alt="">
                                 </span>
                             </div>
                             <div>
@@ -163,7 +191,7 @@
                     </aside>
                 </div>
             </div>
-            
+
         </section>
     </article>
 
@@ -171,34 +199,38 @@
         <section class="container py-5">
             <div class="row align-items-stretch">
                 <aside class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                    <div class="feature_box overflow-hidden border_radius__20 h-100" style="--background: url('../img/feature1.png')">
+                    <div class="feature_box overflow-hidden border_radius__20 h-100"
+                        style="--background: url('../img/feature1.png')">
                         <div class=" h-100 p-5 text-white">
                             <div class="py-5">
                                 <img src="./img/icons/hand-heart.svg" height="60">
                                 <p>نهتم بعملائنا</p>
                                 <p>نحن نولي ثقة عملائنا
-                                وولائهم لنا أهمية مطلقة</p>
+                                    وولائهم لنا أهمية مطلقة</p>
                             </div>
                         </div>
                     </div>
                 </aside>
                 <aside class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-                    <div class="feature_box overflow-hidden border_radius__20 h-100" style="--background: url('../img/feature2.png')">
+                    <div class="feature_box overflow-hidden border_radius__20 h-100"
+                        style="--background: url('../img/feature2.png')">
                         <div class=" h-100 p-5 text-white">
                             <div class="py-5">
                                 <img src="./img/icons/experience.svg" height="60">
                                 <p> استفد من خبراتنا </p>
-                                <p> بدأت الخليج لوساطة التأمين ببيع التأمين منذ اكثر من 15 سنة ونحن نسعى لمشاركة خبرتنا معك كل يوم </p>
+                                <p> بدأت الخليج لوساطة التأمين ببيع التأمين منذ اكثر من 15 سنة ونحن نسعى لمشاركة خبرتنا
+                                    معك كل يوم </p>
                             </div>
                         </div>
                     </div>
                 </aside>
                 <aside class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
-                    <div class="feature_box overflow-hidden border_radius__20 h-100" style="--background: url('../img/feature3.png')">
+                    <div class="feature_box overflow-hidden border_radius__20 h-100"
+                        style="--background: url('../img/feature3.png')">
                         <div class=" h-100 p-5 text-white">
                             <div class="py-5">
                                 <img src="./img/icons/star-persons.svg" height="60">
-                                <p> نساعدك على اختيار 
+                                <p> نساعدك على اختيار
                                     أفضل الحلول </p>
                                 <p> احصل على منتجات تأمينية تناسب احتياجاتك وقدراتك بالتحديد </p>
                             </div>
@@ -210,17 +242,18 @@
     </article>
 
 
-    <article class="services about secondary_bg">
+    <article class="services about secondary_bg py-md-0 py-5">
         <div class="row no-gutters">
-            <aside class="col-md-4">
-                <div class="single_col position-relative">
-                    <div data-aos="zoom-out" data-aos-duration="1000" class="service_circle rounded-circle p-3 me-auto">
-                        <div class="primary_bg secondary_color rounded-circle h-100 w-100 d-flex justify-content-center align-items-center p-3 text-center">
-                            التأمين العام           
+            <aside class="col-md-4 order-md-0 order-1 mt-3">
+                <div class="single_col position-relative d-md-block d-flex justify-content-center align-items-center">
+                    <div data-aos="zoom-out" data-aos-duration="1000" class="service_circle rounded-circle p-3 me-md-auto">
+                        <div
+                            class="primary_bg secondary_color rounded-circle h-100 w-100 d-flex justify-content-center align-items-center p-3 text-center">
+                            التأمين العام
                         </div>
                     </div>
-                    <div class="d-flex">
-                        <div class="col" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="1600">
+                    <div class="d-flex me-md-0 me-3">
+                        <div class="col d-none d-md-block" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="1600">
                             <img src="./img/shape1.svg" class="rotate_y__180" alt="">
                         </div>
                         <div class="col text-start">
@@ -234,19 +267,23 @@
                     </div>
                 </div>
             </aside>
-            <aside class="col-md-4 mt-5">
-                <div class="single_col position-relative">
-                    <div class="text-center mb-3">
-                        <h6 class="h2 text-white font_size__45 line_under position-relative d-inline-block"> خدماتنا </h6>
-                    </div>
-                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500" class="service_circle rounded-circle p-3 mx-auto">
-                        <div class="primary_bg secondary_color rounded-circle h-100 w-100 d-flex justify-content-center align-items-center p-3 text-center">
+            <aside class="col-md-4 mt-5 order-md-1 order-0 mt-3">
+                <div class="text-center mb-3">
+                    <h6 class="h2 text-white font_size__45 line_under position-relative d-inline-block"> خدماتنا
+                    </h6>
+                </div>
+                <div class="single_col position-relative d-md-block d-flex justify-content-center align-items-center">
+                    
+                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500"
+                        class="service_circle rounded-circle p-3 mx-md-auto">
+                        <div
+                            class="primary_bg secondary_color rounded-circle h-100 w-100 d-flex justify-content-center align-items-center p-3 text-center">
                             تأمين
-المركبات         
+                            المركبات
                         </div>
                     </div>
-                    <div class="d-flex">
-                        
+                    <div class="d-flex me-md-0 me-3">
+
                         <div class="col text-center">
                             <ul class="list-unstyled mt-4 font_size__15 p-0 m-0 text-white d-inline-block me-auto mb-3">
                                 <li class="mb-2">الهندسي</li>
@@ -255,23 +292,24 @@
                                 <li class="mb-2">الهندسي</li>
                             </ul>
                         </div>
-                        <div class="col" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="1400">
+                        <div class="col d-none d-md-block" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="1400">
                             <img src="./img/shape1.svg" alt="">
                         </div>
                     </div>
                 </div>
-                
+
             </aside>
-            <aside class="col-md-4">
-                <div class="single_col position-relative">
-                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000" class="service_circle rounded-circle p-3 ms-auto">
-                        <div class="primary_bg secondary_color rounded-circle h-100 w-100 d-flex justify-content-center align-items-center p-3 text-center">
+            <aside class="col-md-4 order-2 mt-3">
+                <div class="single_col position-relative d-md-block d-flex justify-content-center align-items-center">
+                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000"
+                        class="service_circle rounded-circle p-3 ms-md-auto">
+                        <div
+                            class="primary_bg secondary_color rounded-circle h-100 w-100 d-flex justify-content-center align-items-center p-3 text-center">
                             تأمين
-المركبات          
+                            المركبات
                         </div>
                     </div>
-                    <div class="d-flex">
-                        
+                    <div class="d-flex me-md-0 me-3">
                         <div class="col text-end">
                             <ul class="list-unstyled mt-4 font_size__15 p-0 m-0 text-white d-inline-block me-auto">
                                 <li class="mb-2">الهندسي</li>
@@ -280,7 +318,7 @@
                                 <li class="mb-2">الهندسي</li>
                             </ul>
                         </div>
-                        <div class="col" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="1200">
+                        <div class="col d-none d-md-block" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="1200">
                             <img src="./img/shape1.svg" alt="">
                         </div>
                     </div>
@@ -292,81 +330,222 @@
     <article class="initiatives py-5">
         <section class="container py-5">
             <div class="text-end mb-3">
-                <h6 class="h2 secondary_color font_size__45 line_under position-relative d-inline-block"> المبادرات </h6>
+                <h6 data-aos="fade-left" data-aos-duration="1000" class="h2 secondary_color font_size__45 line_under position-relative d-inline-block"> المبادرات
+                </h6>
             </div>
 
-            <div class="owl-carousel owl-carousel-1">
-                <div> 
-                    <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
-                        <img src="./img/feature1.png" class="img-fluid" alt="">
-                    </div>   
-                    <div class="item_content">
-                        <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
-                        <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2" alt="">  28 ابريل 2023 </p>
-                        <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي  </p>
-                        <button class="btn btn-secondary rounded-pill px-4"> شاهد المزيد </button>
-                    </div> 
-                </div>
-                <div> 
-                    <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
-                        <img src="./img/feature1.png" class="img-fluid" alt="">
-                    </div>   
-                    <div class="item_content">
-                        <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
-                        <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2" alt="">  28 ابريل 2023 </p>
-                        <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي  </p>
-                        <button class="btn btn-secondary rounded-pill px-4"> شاهد المزيد </button>
-                    </div> 
-                </div>
-                <div> 
-                    <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
-                        <img src="./img/feature1.png" class="img-fluid" alt="">
-                    </div>   
-                    <div class="item_content">
-                        <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
-                        <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2" alt="">  28 ابريل 2023 </p>
-                        <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي  </p>
-                        <button class="btn btn-secondary rounded-pill px-4"> شاهد المزيد </button>
-                    </div> 
-                </div>
-                <div> 
-                    <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
-                        <img src="./img/feature1.png" class="img-fluid" alt="">
-                    </div>   
-                    <div class="item_content">
-                        <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
-                        <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2" alt="">  28 ابريل 2023 </p>
-                        <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي  </p>
-                        <button class="btn btn-secondary rounded-pill px-4"> شاهد المزيد </button>
-                    </div> 
-                </div>
-                <div> 
-                    <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
-                        <img src="./img/feature1.png" class="img-fluid" alt="">
-                    </div>   
-                    <div class="item_content">
-                        <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
-                        <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2" alt="">  28 ابريل 2023 </p>
-                        <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي  </p>
-                        <button class="btn btn-secondary rounded-pill px-4"> شاهد المزيد </button>
-                    </div> 
-                </div>
-                <div> 
-                    <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
-                        <img src="./img/feature1.png" class="img-fluid" alt="">
-                    </div>   
-                    <div class="item_content">
-                        <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
-                        <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2" alt="">  28 ابريل 2023 </p>
-                        <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي  </p>
-                        <button class="btn btn-secondary rounded-pill px-4"> شاهد المزيد </button>
-                    </div> 
+            <div class="px-4">
+                <div class="owl-carousel owl-carousel-1">
+                    <div>
+                        <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
+                            <img src="./img/feature1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item_content">
+                            <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
+                            <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2"
+                                    alt=""> 28 ابريل 2023 </p>
+                            <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في
+                                الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي </p>
+                            <button class="btn btn-secondary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> شاهد المزيد </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
+                            <img src="./img/feature1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item_content">
+                            <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
+                            <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2"
+                                    alt=""> 28 ابريل 2023 </p>
+                            <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في
+                                الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي </p>
+                            <button class="btn btn-secondary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> شاهد المزيد </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
+                            <img src="./img/feature1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item_content">
+                            <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
+                            <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2"
+                                    alt=""> 28 ابريل 2023 </p>
+                            <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في
+                                الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي </p>
+                            <button class="btn btn-secondary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> شاهد المزيد </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
+                            <img src="./img/feature1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item_content">
+                            <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
+                            <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2"
+                                    alt=""> 28 ابريل 2023 </p>
+                            <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في
+                                الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي </p>
+                            <button class="btn btn-secondary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> شاهد المزيد </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
+                            <img src="./img/feature1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item_content">
+                            <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
+                            <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2"
+                                    alt=""> 28 ابريل 2023 </p>
+                            <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في
+                                الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي </p>
+                            <button class="btn btn-secondary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> شاهد المزيد </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item_picture d-flex justify-content-center align-items-center mb-3 border">
+                            <img src="./img/feature1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="item_content">
+                            <h6 class="h5 mb-3 font_bold secondary_color"> يوم التأمين العالمي </h6>
+                            <p class="primary_color font_size__20 d-flex"> <img src="./img/icons/calendar.svg" class="ms-2"
+                                    alt=""> 28 ابريل 2023 </p>
+                            <p class="font_size__15"> يوم التأمين العالمي هو مناسبة عالمية تحتفل بها العديد من الدول في
+                                الثامن والعشرين من أبريل من كل عام. تأسس هذا اليوم بهدف تعزيز الوعي </p>
+                            <button class="btn btn-secondary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"> شاهد المزيد </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </article>
 
+    <article class="testimonials py-5">
+        <section class="container py-5">
+            <div class="text-end mb-3">
+                <h6 data-aos="fade-left" data-aos-duration="1000" class="h2 secondary_color font_size__45 line_under position-relative d-inline-block"> ما يقوله
+                    عملائنا عنا </h6>
+            </div>
 
+            <div class="px-4">
+                <div class="owl-carousel owl-carousel-2">
+                    <div class="testimonial_item">
+                        <div class="item_picture bg-white p-3 rounded-circle border overflow-hidden mx-auto">
+                            <img src="./img/icons/company.svg" class="img-fluid">
+                        </div>
+                        <div class="item_content bg-white secondary_color p-4 font_size__15 border_radius__20 border">
+                            <p class="mt-4"> يسعدنا أن نوصي بشركتكم لأي شركة تبحث عن خدمات وساطة التأمين، حيث أنكم قادرون
+                                على تقديم الخدمات بأعلى مستويات الجودة والاحترافية. </p>
+                            <div class="col-md-7 me-auto">
+                                <p class="mb-1"> الدكتور عثمان الزامل </p>
+                                <p class="mb-0"> الرئيس التنفيذي شركة دوم </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial_item">
+                        <div class="item_picture bg-white p-3 rounded-circle border overflow-hidden mx-auto">
+                            <img src="./img/icons/company.svg" class="img-fluid">
+                        </div>
+                        <div class="item_content bg-white secondary_color p-4 font_size__15 border_radius__20 border">
+                            <p class="mt-4"> يسعدنا أن نوصي بشركتكم لأي شركة تبحث عن خدمات وساطة التأمين، حيث أنكم قادرون
+                                على تقديم الخدمات بأعلى مستويات الجودة والاحترافية. </p>
+                            <div class="col-md-7 me-auto">
+                                <p class="mb-1"> الدكتور عثمان الزامل </p>
+                                <p class="mb-0"> الرئيس التنفيذي شركة دوم </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial_item">
+                        <div class="item_picture bg-white p-3 rounded-circle border overflow-hidden mx-auto">
+                            <img src="./img/icons/company.svg" class="img-fluid">
+                        </div>
+                        <div class="item_content bg-white secondary_color p-4 font_size__15 border_radius__20 border">
+                            <p class="mt-4"> يسعدنا أن نوصي بشركتكم لأي شركة تبحث عن خدمات وساطة التأمين، حيث أنكم قادرون
+                                على تقديم الخدمات بأعلى مستويات الجودة والاحترافية. </p>
+                            <div class="col-md-7 me-auto">
+                                <p class="mb-1"> الدكتور عثمان الزامل </p>
+                                <p class="mb-0"> الرئيس التنفيذي شركة دوم </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial_item">
+                        <div class="item_picture bg-white p-3 rounded-circle border overflow-hidden mx-auto">
+                            <img src="./img/icons/company.svg" class="img-fluid">
+                        </div>
+                        <div class="item_content bg-white secondary_color p-4 font_size__15 border_radius__20 border">
+                            <p class="mt-4"> يسعدنا أن نوصي بشركتكم لأي شركة تبحث عن خدمات وساطة التأمين، حيث أنكم قادرون
+                                على تقديم الخدمات بأعلى مستويات الجودة والاحترافية. </p>
+                            <div class="col-md-7 me-auto">
+                                <p class="mb-1"> الدكتور عثمان الزامل </p>
+                                <p class="mb-0"> الرئيس التنفيذي شركة دوم </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial_item">
+                        <div class="item_picture bg-white p-3 rounded-circle border overflow-hidden mx-auto">
+                            <img src="./img/icons/company.svg" class="img-fluid">
+                        </div>
+                        <div class="item_content bg-white secondary_color p-4 font_size__15 border_radius__20 border">
+                            <p class="mt-4"> يسعدنا أن نوصي بشركتكم لأي شركة تبحث عن خدمات وساطة التأمين، حيث أنكم قادرون
+                                على تقديم الخدمات بأعلى مستويات الجودة والاحترافية. </p>
+                            <div class="col-md-7 me-auto">
+                                <p class="mb-1"> الدكتور عثمان الزامل </p>
+                                <p class="mb-0"> الرئيس التنفيذي شركة دوم </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <article class="contact_us secondary_bg pt-5 pb-4 position-relative">
+        <section class="container pt-5">
+            <div class="text-end mb-3">
+                <h6 data-aos="fade-left" data-aos-duration="1000" class="h2 font_size__45 text-white line_under position-relative d-inline-block"> تواصل معنا </h6>
+            </div>
+            <div class="row mb-5 pb-5">
+                <aside class="col-md-7">
+                    <div class="row">
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" placeholder="الإسم" aria-label="First name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" placeholder="الإيميل" aria-label="Last name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea class="form-control" placeholder="الموضوع" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary px-4"> إرسال </button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="down_icon mb-4">
+                <span data-aos="fade-up" id="up_icon"
+                    class="arrow_icon mx-auto d-flex justify-content-center align-items-center rounded-circle"
+                    role="button">
+                    <img src="./img/icons/arrow.svg" class="rotate_x__180" alt="">
+                </span>
+            </div>
+            <p class="font_size__15 text-white text-center"> جميع الحقوق محفوظة © 2024 شركة الخليج </p>
+        </section>
+    </article>
+
+
+    <!-- service modal -->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content border_radius__20">
+                <div class="modal-body p-0">
+                    <img src="./img/feature3.png" class="img-fluid w-100" alt="">
+                    <div class="p-4">
+                        فهم طبيعة الأعمال لتقديم أفضل خدمات الوساطة التأمينية والمشورة التي تتناسب مع احتياجات عملائنا لذلك نعتمد على نخبة من أفضل الخبراء للوصول لأفضل الحلول التأمينية ومن مسؤوليتنا الحفاظ على ثقة عملائنا و يعتبر التحول الرقمي والتقنيات الحديثة أحد أهم أسلحتنا للمنافسة القوية في سوق التأمين السعودي
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--------- javascript files ---------->
     <script src="js/jquery-3.1.1.min.js"></script>
